@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>phpschool test</title>
+<meta charset="utf-8">
+<style>
+html {
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+body {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    font-size: 10pt;
+    font-family: sans-serif;
+    padding-bottom: 30px;
+}
+#tbl_setting { width: 100%; }
+#tbl_setting tbody th { padding-right: 20px; }
+#tbl_setting tfoot th { font-weight: normal; color: #828282; }
+#tbl_setting tfoot td { text-align: center; }
+</style>
+<script src="jquery-2.1.4.min.js"></script>
+<script src="settings.js"></script>
+</head>
+<body>
+<table id="tbl_setting" class="table">
+    <tbody>
+    </tbody>
+    <tfoot>
+        <th><div class="message"></div></th>
+        <td><button id="settingSaveBtn">Save</button></td>
+    </tfoot>
+</table>
+</body>
+</html>

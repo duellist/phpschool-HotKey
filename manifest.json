@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "phpschool HotKey",
+    "version": "1.0",
+    "description": "phpschool 단축키 메뉴이동 기능\nCtrl + 0~1까지 설정 및 사용가능",
+    "icons": {
+        "128": "icon.png",
+        "48": "icon.png",
+        "16": "icon.png"
+    },
+    "page_action": {
+        "default_icon": "icon.png",
+        "default_popup": "settings.html",
+        "default_title": "phpschool"
+    },
+    "author": "duellist@naver.com",
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [{
+        "all_frames": false,
+        "js": ["jquery-2.1.4.min.js", "key.js"],
+        "matches": ["http://www.phpschool.com/*"],
+        "run_at": "document_start"
+    }],
+    "minimum_chrome_version": "10.0",
+    "options_page": "settings.html",
+    "options_ui": {
+        "chrome_style": true,
+        "page": "settings.html"
+    },
+    "permissions": ["tabs", "storage", "http://*/*", "https://*/*"]
+}
